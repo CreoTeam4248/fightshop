@@ -187,14 +187,55 @@
             line-height: 1.6;
         }
 
+        /* CONTACTS */
+
+        .contacts {
+            background: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .contacts h2 {
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .contacts p {
+            margin: 12px 0;
+            font-size: 18px;
+        }
+
+        .contacts a {
+            color: #e53935;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contacts a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+
         footer {
             background: #080808;
             color: #777;
             text-align: center;
-            padding: 20px;
+            padding: 25px 20px;
+        }
+
+        footer p {
+            margin: 8px 0;
+        }
+
+        footer a {
+            color: #e53935;
+            text-decoration: none;
+            font-weight: bold;
         }
 
         @media (max-width: 900px) {
+
             .products {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -205,6 +246,7 @@
         }
 
         @media (max-width: 600px) {
+
             header {
                 padding: 15px 20px;
             }
@@ -243,103 +285,358 @@
 <body>
 
 <header>
+
     <div class="logo">
         FIGHT<span>SHOP</span>
     </div>
+
     <nav>
         <a href="#products">Товари</a>
         <a href="#about">Про нас</a>
+        <a href="#contacts">Контакти</a>
     </nav>
+
 </header>
 
+
 <section class="hero">
+
     <h1>СПОРТИВНЕ СПОРЯДЖЕННЯ</h1>
-    <p>Все необхідне для боксу, MMA та єдиноборств</p>
-    <a href="#products" class="hero-button">Переглянути товари</a>
+
+    <p>
+        Все необхідне для боксу, MMA та єдиноборств
+    </p>
+
+    <a href="#products" class="hero-button">
+        Переглянути товари
+    </a>
+
 </section>
 
+
 <section class="products-section" id="products">
-    <h2 class="section-title">Наші товари</h2>
+
+    <h2 class="section-title">
+        Наші товари
+    </h2>
+
     <div class="products">
 
+
         <!-- Товар 1 -->
+
         <div class="product">
-            <img src="boxing-gloves.jpg" alt="Рукавиці боксерські" class="product-image">
+
+            <img
+                src="boxing-gloves.jpg"
+                alt="Рукавиці боксерські"
+                class="product-image"
+            >
+
             <div class="product-info">
-                <h3>Рукавиці боксерські 6oz</h3>
-                <p class="description">Боксерські рукавиці з вінілошкіри. Підходять для тренувань.</p>
-                <div class="price">600 грн</div>
-                <a href="https://t.me" target="_blank" class="buy-button">Написати у телеграм</a>
+
+                <h3>
+                    Рукавиці боксерські 6oz
+                </h3>
+
+                <p class="description">
+                    Боксерські рукавиці з вінілошкіри.
+                    Підходять для тренувань.
+                </p>
+
+                <div class="price">
+                    600 грн
+                </div>
+
+                <a
+                    href="https://t.me/Artem736637"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="buy-button"
+                >
+                    Написати у Telegram
+                </a>
+
             </div>
+
         </div>
+
 
         <!-- Товар 2 -->
+
         <div class="product">
-            <img src="makiwara-leather.jpg" alt="Макивара шкіряна" class="product-image">
+
+            <img
+                src="makiwara-leather.jpg"
+                alt="Макивара шкіряна"
+                class="product-image"
+            >
+
             <div class="product-info">
-                <h3>Макивара велика шкіряна</h3>
-                <p class="description">Велика макивара зі шкіряним покриттям для тренувань ударної техніки.</p>
-                <div class="price">2500 грн</div>
-                <a href="https://t.me" target="_blank" class="buy-button">Написати у телеграм</a>
+
+                <h3>
+                    Макивара велика шкіряна
+                </h3>
+
+                <p class="description">
+                    Велика макивара зі шкіряним покриттям
+                    для тренувань ударної техніки.
+                </p>
+
+                <div class="price">
+                    2500 грн
+                </div>
+
+                <a
+                    href="https://t.me/Artem736637"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="buy-button"
+                >
+                    Написати у Telegram
+                </a>
+
             </div>
+
         </div>
+
 
         <!-- Товар 3 -->
+
         <div class="product">
-            <img src="mma-gloves.jpg" alt="Рукавиці MMA" class="product-image">
+
+            <img
+                src="mma-gloves.jpg"
+                alt="Рукавиці MMA"
+                class="product-image"
+            >
+
             <div class="product-info">
-                <h3>Рукавиці MMA</h3>
-                <p class="description">Шкіряні рукавиці MMA. Доступні розміри M, L та XL.</p>
-                <div class="price">800 грн</div>
-                <a href="https://t.me" target="_blank" class="buy-button">Написати у телеграм</a>
+
+                <h3>
+                    Рукавиці MMA
+                </h3>
+
+                <p class="description">
+                    Шкіряні рукавиці MMA.
+                    Доступні розміри M, L та XL.
+                </p>
+
+                <div class="price">
+                    800 грн
+                </div>
+
+                <a
+                    href="https://t.me/Artem736637"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="buy-button"
+                >
+                    Написати у Telegram
+                </a>
+
             </div>
+
         </div>
+
 
         <!-- Товар 4 -->
+
         <div class="product">
-            <img src="helmet.jpg" alt="Шолом карате" class="product-image">
+
+            <img
+                src="helmet.jpg"
+                alt="Шолом карате"
+                class="product-image"
+            >
+
             <div class="product-info">
-                <h3>Шолом карате Еліт L</h3>
-                <p class="description">Захисний шолом для тренувань та занять єдиноборствами.</p>
-                <div class="price">650 грн</div>
-                <a href="https://t.me" target="_blank" class="buy-button">Написати у телеграм</a>
+
+                <h3>
+                    Шолом карате Еліт L
+                </h3>
+
+                <p class="description">
+                    Захисний шолом для тренувань
+                    та занять єдиноборствами.
+                </p>
+
+                <div class="price">
+                    650 грн
+                </div>
+
+                <a
+                    href="https://t.me/Artem736637"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="buy-button"
+                >
+                    Написати у Telegram
+                </a>
+
             </div>
+
         </div>
+
 
         <!-- Товар 5 -->
+
         <div class="product">
-            <img src="wristbands.png" alt="Напульсники" class="product-image">
+
+            <img
+                src="wristbands.png"
+                alt="Напульсники"
+                class="product-image"
+            >
+
             <div class="product-info">
-                <h3>Напульсники шкіряні</h3>
-                <p class="description">Міцні шкіряні напульсники. Продаються парою.</p>
-                <div class="price">250 грн / пара</div>
-                <a href="https://t.me" target="_blank" class="buy-button">Написати у телеграм</a>
+
+                <h3>
+                    Напульсники шкіряні
+                </h3>
+
+                <p class="description">
+                    Міцні шкіряні напульсники.
+                    Продаються парою.
+                </p>
+
+                <div class="price">
+                    250 грн / пара
+                </div>
+
+                <a
+                    href="https://t.me/Artem736637"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="buy-button"
+                >
+                    Написати у Telegram
+                </a>
+
             </div>
+
         </div>
 
+
         <!-- Товар 6 -->
+
         <div class="product">
-            <img src="shin-guards.jpg" alt="Захист гомілки" class="product-image">
+
+            <img
+                src="shin-guards.jpg"
+                alt="Захист гомілки"
+                class="product-image"
+            >
+
             <div class="product-info">
-                <h3>Захист гомілки та стопи M</h3>
-                <p class="description">Захист гомілки та стопи для тренувань єдиноборствами.</p>
-                <div class="price">500 грн</div>
-                <a href="https://t.me" target="_blank" class="buy-button">Написати у телеграм</a>
+
+                <h3>
+                    Захист гомілки та стопи M
+                </h3>
+
+                <p class="description">
+                    Захист гомілки та стопи
+                    для тренувань єдиноборствами.
+                </p>
+
+                <div class="price">
+                    500 грн
+                </div>
+
+                <a
+                    href="https://t.me/Artem736637"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="buy-button"
+                >
+                    Написати у Telegram
+                </a>
+
             </div>
+
         </div>
 
     </div>
+
 </section>
+
 
 <section class="about" id="about">
-    <h2>Про нас</h2>
-    <p>Ми продаємо якісне спортивне спорядження для боксу, MMA та інших видів єдиноборств. Наш пріоритет — ваша безпека та комфорт під час тренувань.</p>
+
+    <h2>
+        Про нас
+    </h2>
+
+    <p>
+        Ми продаємо якісне спортивне спорядження
+        для боксу, MMA та інших видів єдиноборств.
+        Наш пріоритет — ваша безпека та комфорт
+        під час тренувань.
+    </p>
+
 </section>
 
+
+<!-- CONTACTS -->
+
+<section class="contacts" id="contacts">
+
+    <h2>
+        Контакти
+    </h2>
+
+    <p>
+        📱 Телефон:
+        <a href="tel:+380736916979">
+            +380 73 691 69 79
+        </a>
+    </p>
+
+    <p>
+        💬 Telegram:
+        <a
+            href="https://t.me/Artem736637"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            @Artem736637
+        </a>
+    </p>
+
+    <p>
+        📦 Відправка по Україні
+    </p>
+
+</section>
+
+
+<!-- FOOTER -->
+
 <footer>
-    <p>© 2026 FIGHTSHOP. Всі права захищені.</p>
+
+    <p>
+        © 2026 FIGHTSHOP. Всі права захищені.
+    </p>
+
+    <p>
+        📱
+        <a href="tel:+380736916979">
+            +380 73 691 69 79
+        </a>
+    </p>
+
+    <p>
+        💬
+        <a
+            href="https://t.me/Artem736637"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            @Artem736637
+        </a>
+    </p>
+
 </footer>
 
 </body>
 </html>
-
