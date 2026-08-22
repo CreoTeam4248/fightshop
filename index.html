@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fight Shop — Спортивне спорядження</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #111;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #e53935;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #e53935;
+        }
+
+        .hero {
+            background: linear-gradient(
+                rgba(0,0,0,0.7),
+                rgba(0,0,0,0.7)
+            ),
+            url("images/banner.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            min-height: 420px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .hero-button {
+            background: #e53935;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .products-section {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .product {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: #ddd;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-info h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            color: #666;
+            font-size: 15px;
+            min-height: 45px;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 25px;
+            font-weight: bold;
+            color: #e53935;
+            margin-bottom: 15px;
+        }
+
+        .buy-button {
+            display: block;
+            width: 100%;
+            padding: 13px;
+            background: #111;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .buy-button:hover {
+            background: #e53935;
+        }
+
+        .about {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 50px;
+        }
+
+        .about h2 {
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+            color: #ccc;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .contacts {
+            padding: 50px 20px;
+            text-align: center;
+            background: white;
+        }
+
+        .contacts h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .contacts p {
+            margin: 8px;
+            font-size: 17px;
+        }
+
+        .contacts a {
+            color: #e53935;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #080808;
+            color: #777;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 900px) {
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 15px 20px;
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                min-height: 350px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        FIGHT<span>SHOP</span>
+    </div>
+
+    <nav>
+        <a href="#products">Товари</a>
+        <a href="#about">Про нас</a>
+        <a href="#contacts">Контакти</a>
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <h1>СПОРТИВНЕ СПОРЯДЖЕННЯ</h1>
+
+    <p>
+        Все необхідне для боксу, MMA та єдиноборств
+    </p>
+
+    <a href="#products" class="hero-button">
+        Переглянути товари
+    </a>
+
+</section>
+
+<section class="products-section" id="products">
+
+    <h2 class="section-title">
+        Наші товари
+    </h2>
+
+    <div class="products">
+
+        <div class="product">
+
+            <img
+                src="images/boxing-gloves.jpg"
+                alt="Рукавиці боксерські"
+                class="product-image"
+            >
+
+            <div class="product-info">
+
+                <h3>Рукавиці боксерські 6oz</h3>
+
+                <p class="description">
+                    Боксерські рукавиці з вінілошкіри.
+                    Підходять для тренувань.
+                </p>
+
+                <div class="price">
+                    600 грн
+                </div>
+
+                <button
+                    class="buy-button"
+                    onclick="buyProduct('Рукавиці боксерські 6oz')"
+                >
+                    Купити
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="product">
+
+            <img
+                src="images/makiwara-leather.jpg"
+                alt="Макивара шкіряна"
+                class="product-image"
+            >
+
+            <div class="product-info">
+
+                <h3>Макивара велика шкіряна</h3>
+
+                <p class="description">
+                    Велика макивара зі шкіряним покриттям
+                    для тренувань ударної техніки.
+                </p>
+
+                <div class="price">
+                    2500 грн
+                </div>
+
+                <button
+                    class="buy-button"
+                    onclick="buyProduct('Макивара велика шкіряна')"
+                >
+                    Купити
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="product">
+
+            <img
+                src="images/mma-gloves.jpg"
+                alt="Рукавиці MMA"
+                class="product-image"
+            >
+
+            <div class="product-info">
+
+                <h3>Рукавиці MMA</h3>
+
+                <p class="description">
+                    Шкіряні рукавиці MMA.
+                    Доступні розміри M, L та XL.
+                </p>
+
+                <div class="price">
+                    800 грн
+                </div>
+
+                <button
+                    class="buy-button"
+                    onclick="buyProduct('Рукавиці MMA')"
+                >
+                    Купити
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="product">
+
+            <img
+                src="images/helmet.jpg"
+                alt="Шолом карате"
+                class="product-image"
+            >
+
+            <div class="product-info">
+
+                <h3>Шолом карате Еліт L</h3>
+
+                <p class="description">
+                    Захисний шолом для тренувань
+                    та занять єдиноборствами.
+                </p>
+
+                <div class="price">
+                    650 грн
+                </div>
+
+                <button
+                    class="buy-button"
+                    onclick="buyProduct('Шолом карате Еліт L')"
+                >
+                    Купити
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- НАПУЛЬСНИКИ -->
+
+        <div class="product">
+
+            <img
+                src="images/wristbands.png"
+                alt="Напульсники"
+                class="product-image"
+            >
+
+            <div class="product-info">
+
+                <h3>Напульсники шкіряні</h3>
+
+                <p class="description">
+                    Міцні шкіряні напульсники.
+                    Продаються парою.
+                </p>
+
+                <div class="price">
+                    250 грн / пара
+                </div>
+
+                <button
+                    class="buy-button"
+                    onclick="buyProduct('Напульсники шкіряні')"
+                >
+                    Купити
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="product">
+
+            <img
+                src="images/shin-guards.jpg"
+                alt="Захист гомілки"
+                class="product-image"
+            >
+
+            <div class="product-info">
+
+                <h3>Захист гомілки та стопи M</h3>
+
+                <p class="description">
+                    Захист гомілки та стопи
+                    для тренувань єдиноборствами.
+                </p>
+
+                <div class="price">
+                    500 грн
+                </div>
+
+                <button
+                    class="buy-button"
+                    onclick="buyProduct('Захист гомілки та стопи M')"
+                >
+                    Купити
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="about" id="about">
+
+    <h2>Про наш магазин</h2>
+
+    <p>
+        Ми продаємо спортивне спорядження для боксу,
+        MMA, карате та інших єдиноборств.
+        У нас можна знайти екіпірування для тренувань
+        за доступними цінами.
+    </p>
+
+</section>
+
+<section class="contacts" id="contacts">
+
+    <h2>Контакти</h2>
+
+    <p>
+        📱 Телефон:
+        <a href="tel:+380736916979">
+            +380 73 691 69 79
+        </a>
+    </p>
+
+    <p>
+        💬 Telegram:
+        <a href="https://t.me/Artem736637" target="_blank">
+            Написати нам
+        </a>
+    </p>
+
+    <p>
+        📦 Відправка по Україні
+    </p>
+
+</section>
+
+<footer>
+
+    © 2026 FIGHTSHOP — Спортивне спорядження
+
+</footer>
+
+<script>
+
+function buyProduct(productName) {
+
+    alert(
+        "Ви обрали: " +
+        productName +
+        "\n\nДля замовлення зв'яжіться з нами."
+    );
+
+}
+
+</script>
+
+</body>
+</html>
+  
